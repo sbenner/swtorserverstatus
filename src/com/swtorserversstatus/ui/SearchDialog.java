@@ -21,7 +21,6 @@ import static android.R.string.cancel;
 
 
 
-
 public class SearchDialog extends AlertDialog.Builder {
 
     public SearchDialog(final Activity activity,final ListView list) {

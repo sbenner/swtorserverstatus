@@ -10,6 +10,7 @@ import android.view.ContextMenu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import com.swtorserversstatus.*;
@@ -35,9 +36,13 @@ public class StatusListFragment extends ListFragment
     ImageAdapter imageAdapter;
     Context context;
     public static HashSet<Server> list;
+    public static ListView listView;
     Bundle bundle;
     ViewPager    mViewPager;
     private int tag = 0;
+
+
+
 
     private int tab = 0;
 
@@ -69,6 +74,7 @@ public class StatusListFragment extends ListFragment
         super.onCreate(savedInstanceState);
        // setRetainInstance(true);
 
+
         System.out.println("onActivityCreated tag changed: " + tab);
                 this.bundle = getArguments();
                 tag = this.bundle.getInt("tab");
@@ -83,8 +89,6 @@ public class StatusListFragment extends ListFragment
 
         setRetainInstance(true);
 
-
-
         if (this.bundle != null) {
 
             getLoaderManager().initLoader(tag, this.bundle, this);
@@ -93,12 +97,11 @@ public class StatusListFragment extends ListFragment
             if (tag == 0) {
                 registerForContextMenu(getListView());
             }
+            listView  = getListView();
         }
 
 
     }
-
-
 
     @Override
     public boolean onContextItemSelected(MenuItem item) {
