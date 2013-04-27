@@ -43,10 +43,6 @@ public class StatusListFragment extends ListFragment
 
 
 
-
-    private int tab = 0;
-
-
     @Override
     public void setUserVisibleHint(boolean isVisibleToUser) {
     super.setUserVisibleHint(isVisibleToUser);
@@ -72,8 +68,7 @@ public class StatusListFragment extends ListFragment
         super.onCreate(savedInstanceState);
        // setRetainInstance(true);
 
-
-        System.out.println("onActivityCreated tag changed: " + tab);
+        System.out.println("onActivityCreated tab changed: " + tag);
                 this.bundle = getArguments();
                 tag = this.bundle.getInt("tab");
                 context = getActivity().getApplicationContext();
