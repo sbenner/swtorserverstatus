@@ -58,7 +58,7 @@ public class ServerStatusMain extends FragmentActivity
 
 
             mTabsAdapter.addTab(mTabHost.newTabSpec("my_servers").setIndicator("",getResources().getDrawable(R.drawable.tor_server)),
-                    StatusListFragment.class, null);
+                                StatusListFragment.class, null);
 
 
             mTabsAdapter.addTab(mTabHost.newTabSpec("us_servers").setIndicator("",getResources().getDrawable(R.drawable.a)),
@@ -127,26 +127,27 @@ public class ServerStatusMain extends FragmentActivity
         switch (item.getItemId()) {
 
             case R.id.search:
-                if (list == null) {
+                if (StatusListFragment.list == null) {
                     Utils.showToast(this, "No Servers Were loaded.");
                     return false;
                 }
                 SearchDialog sd = null;
                 if (mTabHost.getCurrentTabTag().equals("my_servers")) {
-                    sd = new SearchDialog(this, getLvMyServerList());
+                    sd = new SearchDialog(this, StatusListFragment.listView);
+
                 }
                 if (mTabHost.getCurrentTabTag().equals("us_servers")) {
-                    sd = new SearchDialog(this, getUsServerList());
+                    sd = new SearchDialog(this, StatusListFragment.listView );
                 }
                 if (mTabHost.getCurrentTabTag().equals("eu_servers")) {
-                    sd = new SearchDialog(this, getEuServerList());
+                    sd = new SearchDialog(this, StatusListFragment.listView );
                 }
                 sd.show();
 
                 return true;
 
             case R.id.myserver:
-                if ( ServerListLoader.servers == null) {
+                if ( StatusListFragment.list == null) {
                     Utils.showToast(this, "No Servers Were loaded.");
                     return false;
                 }
