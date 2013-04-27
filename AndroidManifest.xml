@@ -21,7 +21,7 @@
     <uses-permission android:name="android.permission."/>
 
     <application android:label="SWTOR Server Status" android:icon="@drawable/icon">
-        <activity android:name="SWTORServerStatus1"
+        <activity android:name=".ServerStatusMain"
                   android:label="SWTOR Servers Status"
                 android:configChanges="locale">
             <intent-filter>

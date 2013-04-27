@@ -17,7 +17,7 @@ import java.util.ArrayList;
 import java.util.HashSet;
 
 
-public class SWTORServerStatus1 extends FragmentActivity
+public class ServerStatusMain extends FragmentActivity
         implements ServerStatus {
     /**
      * Called when the activity is first created.
@@ -69,14 +69,6 @@ public class SWTORServerStatus1 extends FragmentActivity
                                 StatusListFragment.class, null);
 
 
-            //mTabHost.setOnTabChangedListener(this);
-
-
-
-
-//            if (savedInstanceState != null) {
-//                mTabHost.setCurrentTabByTag(savedInstanceState.getString("my_servers"));
-//            }
 
 
         } catch (Exception e) {
