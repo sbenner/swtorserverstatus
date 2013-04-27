@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <color name="buffed">#ff64d875</color>
+    <color name="skill_text">#ffa2c0f6</color>
+    <color name="point_text">#ff138bbd</color>
+    <color name="selected">#fff0c342</color>
+    <color name="republic_backdrop">#ff000c18</color>
+    <color name="republic_divider">#ff006b80</color>
+    <color name="republic_header">#ffadeefc</color>
+    <color name="republic_text">#ff32bbdf</color>
+    <color name="empire_backdrop">#ff180800</color>
+    <color name="empire_divider">#ff800003</color>
+    <color name="empire_header">#fffcaeae</color>
+    <color name="empire_text">#ffdf3733</color>
+    <color name="republic_fancy_border_background">#ff002132</color>
+    <color name="republic_skill_tree_dark">#ff00131d</color>
+    <color name="empire_skill_tree_dark">#ff1e0500</color>
+    <color name="skill_tree_blue">#ff054f87</color>
+    <color name="skill_tree_red">#ff521e33</color>
+    <color name="skill_tree_purple">#ff2c2f7e</color>
+    <color name="skill_tree_green">#ff1b603c</color>
+    <color name="skill_tree_orange">#ff573b12</color>
+</resources>

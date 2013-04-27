@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+
+        >
+
+            <TextView android:id="@+id/servername"
+                      android:paddingLeft="5px"
+                      android:textColor="#3ccbf5"
+                      android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+            <TextView android:id="@+id/serverstatus"
+                android:paddingLeft="5px"
+                android:textStyle="bold"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/servername"
+                    />
+
+
+
+</RelativeLayout>
+
+
+

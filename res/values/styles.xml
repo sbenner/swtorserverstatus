@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<style name="Theme" parent="android:Theme">
+</style>
+<style name="Theme.Dialog" parent="Theme">
+    <item name="android:layout_width">wrap_content</item>
+
+    <item name="android:layout_height">wrap_content</item>
+    <item name="android:windowIsFloating">true</item>
+    <item name="android:windowNoTitle">true</item>
+
+    <item name="android:windowContentOverlay">@null</item>
+    <item name="android:windowBackground">@drawable/bg</item>
+    <!--<item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>-->
+    <!--<item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>-->
+</style>
+</resources>
