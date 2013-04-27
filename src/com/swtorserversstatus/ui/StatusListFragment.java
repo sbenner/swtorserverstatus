@@ -13,7 +13,7 @@ import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import com.swtorserversstatus.*;
+import com.swtorserversstatus.R;
 import com.swtorserversstatus.model.Server;
 import com.swtorserversstatus.utils.ServerListLoader;
 import com.swtorserversstatus.utils.Utils;
@@ -57,11 +57,9 @@ public class StatusListFragment extends ListFragment
         if(list!=null)System.out.println("list.size()  "+ list.size());
 
     }
-    else if (isVisibleToUser == false) {  }
-
+    else if (isVisibleToUser == false) {}
 
     }
-
 
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
         super.onCreateContextMenu(menu, v, menuInfo);
@@ -69,7 +67,6 @@ public class StatusListFragment extends ListFragment
         menu.add(0, v.getId(), 0, "Delete Server");
 
     }
-
     public void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
