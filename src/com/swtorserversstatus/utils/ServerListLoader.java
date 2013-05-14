@@ -3,6 +3,7 @@ package com.swtorserversstatus.utils;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.v4.content.AsyncTaskLoader;
+import android.util.Log;
 import com.swtorserversstatus.model.Server;
 import org.xmlpull.v1.XmlPullParserException;
 
@@ -119,7 +120,8 @@ public class ServerListLoader extends AsyncTaskLoader<HashSet<Server>> {
         if (isStarted()) {
             // If the Loader is currently started, we can immediately
             // deliver its results.
-            super.deliverResult(apps);
+            Log.d(ServerListLoader.this.getClass().getName(),String.valueOf(apps.size()));
+                         super.deliverResult(apps);
         }
 
         // At this point we can release the resources associated with
@@ -137,6 +139,7 @@ public class ServerListLoader extends AsyncTaskLoader<HashSet<Server>> {
         if (servers != null) {
             // If we currently have a result available, deliver it
             // immediately.
+        Log.d("servers size", String.valueOf(servers.size()));
             deliverResult(servers);
         }
         else

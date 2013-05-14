@@ -42,20 +42,22 @@ public class StatusListFragment extends ListFragment
     private int tag = 0;
 
 
-
-    @Override
-    public void setUserVisibleHint(boolean isVisibleToUser) {
-    super.setUserVisibleHint(isVisibleToUser);
-
-    if (isVisibleToUser == true) {
-        System.out.println("getTag   "+ getTag());
-        System.out.println("setUserVisibleHint  "+ tag);
-        if(list!=null)System.out.println("list.size()  "+ list.size());
-
-    }
-    else if (isVisibleToUser == false) {}
-
-    }
+//
+//    @Override
+//    public void setUserVisibleHint(boolean isVisibleToUser) {
+//
+//
+//   super.setUserVisibleHint(isVisibleToUser);
+//
+//    if (isVisibleToUser == true) {
+//        System.out.println("getTag   "+ getTag());
+//        System.out.println("setUserVisibleHint  "+ tag);
+//        if(list!=null)System.out.println("list.size()  "+ list.size());
+//
+//    }
+//    else if (isVisibleToUser == false) {}
+//
+//    }
 
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
         super.onCreateContextMenu(menu, v, menuInfo);
@@ -80,7 +82,7 @@ public class StatusListFragment extends ListFragment
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
-        setRetainInstance(true);
+        //setRetainInstance(true);
 
         if (this.bundle != null) {
 
