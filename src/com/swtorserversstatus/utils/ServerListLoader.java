@@ -45,36 +45,6 @@ public class ServerListLoader extends AsyncTaskLoader<HashSet<Server>> {
     @Override public HashSet<Server>  loadInBackground() {
 
         HashSet<Server> servers=null;
-
-//        InputStream is = null;
-//
-//                try {
-//                    is = new ByteArrayInputStream(Utils.fetch("http://www.swtor.com/server-status?cb="+System.currentTimeMillis(), null).toByteArray());
-//                } catch (Exception cte) {
-//                    //cte.printStackTrace();
-//                }
-//
-//                try {
-//                    //InputStream is = fetch("http://www.swtor.com/server-status");
-//
-//                    String l = Utils.readInputStream(is);
-//
-//
-//                    if (l != null) {
-//
-//                        if (!l.contains("<h1>MAINTENANCE</h1>")) {
-//                            servers= Utils.parseServers(l);
-//                        } else {
-//
-//                        }
-//                    } else {
-//                    }
-//
-//
-//                } catch (Exception e) {
-//                    e.printStackTrace();
-//                }
-
         servers = Utils.getServers();
 
         return servers;
@@ -147,20 +117,7 @@ public class ServerListLoader extends AsyncTaskLoader<HashSet<Server>> {
             forceLoad();
         }
 
-        // Start watching for changes in the app data.
-//        if (mPackageObserver == null) {
-//            mPackageObserver = new PackageIntentReceiver(this);
-//        }
-//
-//        // Has something interesting in the configuration changed since we
-//        // last built the app list?
-//        boolean configChange = mLastConfig.applyNewConfig(getContext().getResources());
-//
-//        if (takeContentChanged() || mApps == null || configChange) {
-//            // If the data has changed since the last time it was loaded
-//            // or is not currently available, start a load.
 
-//        }
     }
 
     /**
