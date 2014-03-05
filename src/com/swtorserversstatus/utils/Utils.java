@@ -78,55 +78,6 @@ public class Utils {
       }
 
 
-//
-//
-//
-//     public static HashSet<Server> parseServers(String l) throws XmlPullParserException, IOException {
-//        HashSet<Server> serverList = new HashSet<Server>();
-//        InputStream bais = new ByteArrayInputStream(l.getBytes());
-//        XmlPullParserFactory factory = XmlPullParserFactory.newInstance();
-//        factory.setNamespaceAware(false);
-//        XmlPullParser parser = factory.newPullParser();
-//        parser.setInput(new InputStreamReader(bais));
-//
-//        parser.getLineNumber();
-//        int eventType = parser.getEventType();
-//        do {
-//
-//            parser.next();
-//            if (parser.getAttributeCount() > 1) {Server server = new Server();
-//                            for (int i = 0; i < parser.getAttributeCount(); i++) {
-//                                // System.out.println(parser.getAttributeName(i)+":"+parser.getAttributeValue(i));
-//
-//                                if (parser.getAttributeName(i).equals("data-status"))
-//                                    server.setServerStatus(parser.getAttributeValue(i));
-//                                if (parser.getAttributeName(i).equals("data-name"))
-//                                    server.setServerName(parser.getAttributeValue(i).toUpperCase());
-//                                if (parser.getAttributeName(i).equals("data-population"))
-//                                    server.setServerPopulation(Integer.parseInt(parser.getAttributeValue(i)));
-//                                if (parser.getAttributeName(i).equals("data-type"))
-//                                    server.setServerType(parser.getAttributeValue(i));
-//                                if (parser.getAttributeName(i).equals("data-timezone"))
-//                                    server.setServerTimezone(parser.getAttributeValue(i));
-//                                if (parser.getAttributeName(i).equals("data-language"))
-//                                    server.setServerLanguage(parser.getAttributeValue(i));
-//                            }
-//                            serverList.add(server);
-//
-//            }
-//
-//            eventType = parser.getEventType();
-//            if (eventType == XmlPullParser.TEXT) {
-//                Log.d("test", parser.getText());
-//            }
-//        } while (eventType != XmlPullParser.END_DOCUMENT);
-//
-//     //  if(serverList.size()>0)serverList.remove(0);
-//
-//        return serverList;
-//    }
-
-
     public static HashSet<Server> makeZonedList(HashSet<Server> list, boolean zone) {
         HashSet<Server> serverList = new HashSet<Server>();
 
@@ -190,12 +141,6 @@ public class Utils {
                 }
             }
 
-            //reader.close();
-//             str.insert(0,"<test>");
-//             str.append("</test>");
-//            in.close();
-//          l.add(0,"<test>");
-//          l.add(0,"<?xml version=\"1.0\"?>");
 
             //l.add(l.size(),"</test>");
         } catch (IOException e) {
@@ -216,12 +161,7 @@ public class Utils {
    //  public InputStream fetch(String urlString)
             throws  IOException,ConnectTimeoutException {
 
-       //HttpParams httpParameters = new BasicHttpParams();
-//       HttpConnectionParams.setSoTimeout(httpParameters, 1000);
-//       HttpConnectionParams.setConnectionTimeout(httpParameters, 1000);
 
-
-        //DefaultHttpClient client = new DefaultHttpClient(httpParameters);
         DefaultHttpClient client = new DefaultHttpClient();
         Log.v("url", urlString);
 
@@ -310,14 +250,8 @@ public class Utils {
     eventType = xpp.next();
    }
 
-    ///comparing to get the freshest records
 
-
-      HashMap<String,Server> map = makeServerMap(bigList);
-
-
-
-      //HashMap<String,Server> map = makeServerMap(bigList);
+    HashMap<String,Server> map = makeServerMap(bigList);
 
 
     HashSet<Server> freshList = new HashSet<Server>();
@@ -398,14 +332,16 @@ public class Utils {
     public static void writeMyServerListToXml(Activity activity
                                        ,String content)
     {
-        try{
-        FileOutputStream fOut = activity.openFileOutput("servers.xml", Context.MODE_WORLD_WRITEABLE);
-    OutputStreamWriter osw = new OutputStreamWriter(fOut);
-    String fileContent = content; //build file content
-    osw.write(fileContent );
-    osw.flush();
-    osw.close();
-        }catch (Exception e){e.printStackTrace();}
+        try
+        {
+         FileOutputStream fOut = activity.openFileOutput("servers.xml", Context.MODE_WORLD_WRITEABLE);
+         OutputStreamWriter osw = new OutputStreamWriter(fOut);
+         String fileContent = content; //build file content
+         osw.write(fileContent );
+         osw.flush();
+         osw.close();
+        }catch (Exception e)
+        {e.printStackTrace();}
     }
 
 
